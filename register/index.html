@@ -25,7 +25,7 @@
           <button type="submit" class="registerButton">Submit</button>
           <div class="flex">
             <p><span>OR</span> you have an account</p>
-            <a href="./login.html"><img src="../icons/login.png" width="50px" alt="" /></a>
+            <a href="../login/index.html"><img src="../icons/login.png" width="50px" alt="" /></a>
           </div>
           <p id="error"></p>
         </form>
@@ -55,7 +55,7 @@
           const newUser = { name, email, password };
           window.sessionStorage.setItem("user", JSON.stringify(newUser));
           localStorage.setItem("user", JSON.stringify(newUser));
-          window.location.href = "../home.html";
+          window.location.href = "../index.html";
         }
       });
     </script>

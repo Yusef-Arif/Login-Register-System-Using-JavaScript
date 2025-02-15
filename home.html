@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="flex">
+      <img src="./icons/profile.png" width="60px" alt="" />
+      <div class="flex" id="logout">
+        <button>logout</button>
+        <img src="./icons/logout.png" width="30px" alt="" />
+      </div>
+    </nav>
+    <h1 id="message">Hello!</span></h1>
+    <script>
+      var userSesson = sessionStorage.getItem("user");
+      var userLocal = localStorage.getItem("user");
+      if (userSesson) {
+        var info = JSON.parse(userLocal);
+        document.getElementById("message").innerHTML = `Hello ${info.name}`;
+      } else {
+        window.location.href = "register.html";
+      }
+
+      document.getElementById("logout").addEventListener("click", function (e) {
+        console.log("first");
+        e.preventDefault();
+        window.sessionStorage.removeItem("user");
+        window.location.href = "./register.html";
+      });
+    </script>
+  </body>
+</html>

@@ -22,14 +22,15 @@
         var info = JSON.parse(userLocal);
         document.getElementById("message").innerHTML = `Hello ${info.name}`;
       } else {
-        window.location.href = "register.html";
+        console.log('first')
+        window.location.href = "./pages/register.html";
       }
 
       document.getElementById("logout").addEventListener("click", function (e) {
         console.log("first");
         e.preventDefault();
         window.sessionStorage.removeItem("user");
-        window.location.href = "./register.html";
+        window.location.href = "./pages/register.html";
       });
     </script>
   </body>
